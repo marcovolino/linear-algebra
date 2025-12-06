@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Introduction
+title: Introduction to Linear Algebra
 ---
 
 Linear algebra is a branch of mathematics that deals with vectors, vector spaces (linear spaces), and linear transformations. 
