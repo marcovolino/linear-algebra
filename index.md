@@ -3,13 +3,13 @@ layout: home
 ---
 
 {% assign posts = site.posts %}
-<ul class="post-list">
+{{posts}}
+
+<ul>
 {%- for post in posts -%}
   <li>
     <h3>
-    <a class="post-link" href="{{ post.url | relative_url }}">
-      {{ post.title | escape }}
-    </a>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </h3>
   </li>
 {%- endfor -%}
