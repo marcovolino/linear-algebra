@@ -1,9 +1,7 @@
 ---
 layout: post
-title: Introduction
+title: Vectors
 ---
-
-## Vectors
 A vector is a mathematical object that consists of both a magnitude and direction. 
 Vectors can be used to represent quantaties that have these two characteristics, such as force and velocity. 
 Vectors can be interpreted 
