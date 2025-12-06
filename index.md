@@ -6,5 +6,5 @@ layout: home
 
 
 {% for page in pages %}
-- [{{page.title}}]({{site.url}}/{{page.url}})
+- [{{page.title}}]({{site.baseurl}}{{page.url}})
 {% endfor %}
