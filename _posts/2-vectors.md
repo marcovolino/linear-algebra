@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Vectors
 ---
 A vector is a mathematical object that consists of both a magnitude and direction. 
