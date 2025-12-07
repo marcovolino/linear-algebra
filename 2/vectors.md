@@ -2,15 +2,18 @@
 layout: page
 title: Vectors
 ---
-A vector is a mathematical object that consists of both a magnitude and direction. 
-Vectors can be used to represent quantaties that have these two characteristics, such as force and velocity. 
-Vectors can be interpreted 
+Vectors are the fundamental objects of linear algebra. They allow us to describe motion, forces, data, images, signals, geometric transformations, and entire systems of equations in a unified mathematical language.
+
+A vector is simply an ordered list of numbers, but with a crucial structure:
+these numbers behave collectively under the two operations of addition and scalar multiplication.
 
 
-### Definitions and Notation
+### What Is a Vector?
+A vector in $$ℝ^n$$ is an ordered list of $$\symbf{n}$$ real numbers. 
+
 A vector is commonly denoted as a **bold** lower-case letter, _e.g._  $$\symbf{v}$$, or a lower-case letter with an arrow above it, _e.g._ $$\vec{v}$$. The scalar components of an N-dimensional vector are commonly denoted as lower-case letters with an integer subscript denoting its position in the vector e.g. $$v_1$$, $$v_2$$, ... $$v_N$$, 
 
-Within this document a vector and its associated components are denoted as:
+Within this course a vector, and its associated components, are denoted as follows:
 
 $$
 \symbf{v} = \begin{bmatrix}
@@ -21,29 +24,10 @@ $$
 \end{bmatrix}
 $$
 
+#### Different ways to understand a vector
 
-
-
-The magnitude of a vector is denoted 
-$$
-|\symbf{v}|
-$$,and is computed as follows:
-
-$$
-|\symbf{v}| = \sqrt{v_1^2 + v_2^2 + \dots + v_N^2}
-$$
-
-or more generally expressed as 
-
-$$
-|\symbf{v}| = \sqrt{\sum_{n=1}^{N}{v_n^2}}
-$$
-
-
-
-#### Geometric interpretation of vectors
-
-Vectors can also be interpreted geometricall
+**Geometric view**:
+Vectors can also be interpreted geometrically
 
 <script type="text/tikz">
 \begin{tikzpicture}
@@ -54,12 +38,13 @@ Vectors can also be interpreted geometricall
 \end{tikzpicture}
 </script>
 
+**Algebraic view**:
+A list of numbers we can add and scale according to precise rules.
 
-### Unit Vectors
+**Data view**:
+A structured collection of measurements, e.g., temperature, intensity, features of an image.
+
+**Functional view**
+A vector represents a state of a system, a set of coefficients, or a point in parameter space.
 
 
-Unit vectors 
-
-$$
-\symbf{u} = \frac{\symbf{v}}{|\symbf{v}|} 
-$$
