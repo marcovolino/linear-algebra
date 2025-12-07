@@ -42,3 +42,17 @@ By the end of the course, students will be able to:
 {% for page in pages %}
 - [{{page.title}}]({{site.baseurl}}{{page.url}})
 {% endfor %}
+
+{% assign contents = site.contents %}
+
+{% for module in contents %}
+
+
+  {% for section in module.nested %}
+  
+    {{module}} - {{section}} - {{section.url}}
+
+
+  {% endfor %}
+  
+{% endfor %}
