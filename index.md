@@ -11,11 +11,6 @@ The course makes use of the following text books with references to related sect
 - Jānis Lazovskis – Introduction to Linear Algebra
 - Gilbert Strang – Introduction to Linear Algebra (5th Edition)
 
-## Prerequisites
-- Prior exposure to basic linear algebra (not necessarily strong).
-- Comfort with algebra and basic calculus notation.
-- No programming experience required (tutorials provided).
-
 ## Course Contents
 {% assign contents = site.contents %}
 {% for module in contents %}
@@ -24,6 +19,11 @@ The course makes use of the following text books with references to related sect
 - [{{section.section}}]({{section.url}})
   {% endfor %}
 {% endfor %}
+
+## Prerequisites
+- Prior exposure to basic linear algebra (not necessarily strong).
+- Comfort with algebra and basic calculus notation.
+- No programming experience required (tutorials provided).
 
 ## Learning Outcomes
 By the end of the course, students will be able to:
