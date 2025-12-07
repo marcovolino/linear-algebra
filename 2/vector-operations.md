@@ -2,21 +2,57 @@
 layout: page
 title: Vector Operations
 ---
+Having introduced vectors as ordered lists of numbers representing points, directions, or data, we now develop the algebra of vectors, the operations that make vector spaces meaningful.
+
 
 ## Addition and Subtraction
-Vectors can be added and subtracted from one another as follows:
 
-$$
-\symbf{v} \pm \symbf{w}  = \begin{bmatrix}
-    v_1 \pm w_1 \\
-    v_2 \pm w_2 \\
+Given two vectors in $$𝑅^n$$:
+
+$$\symbf{v}  = \begin{bmatrix}
+    v_1 \\
+    v_2 \\
     \vdots \\
-    v_N \pm w_N
+    v_n
+\end{bmatrix}
+\symbf{w}  = \begin{bmatrix}
+    w_1 \\
+    w_2 \\
+    \vdots \\
+    w_n
 \end{bmatrix}
 $$
 
-- Vector addition is commutative $$ \symbf{v} + \symbf{w} = \symbf{w} + \symbf{v}$$
-- Vector subtraction is not commutative $$ \symbf{v} - \symbf{w} \neq \symbf{w} - \symbf{v}$$
+their addition is defined componentwise:
+
+$$
+\symbf{v} \pm \symbf{w}  = \begin{bmatrix}
+    v_1 + w_1 \\
+    v_2 + w_2 \\
+    \vdots \\
+    v_N + w_N
+\end{bmatrix}
+$$
+
+Vector addition is commutative $$\symbf{v} + \symbf{w} = \symbf{w} + \symbf{v}$$
+
+**Geometric Interpretation**
+In $$𝑅^2$$ or $$𝑅^3$$, Place the tail of $$\symbf{w}$$ at the head of \symbf{v}. The diagonal from the start of 
+\symbf{v} to the head of \symbf{w} is \symbf{v+w}.
+
+
+<script type="text/tikz">
+\begin{tikzpicture}
+\draw[help lines, color=gray!30, dashed] (-4.9,-4.9) grid (4.9,4.9);
+\draw[->,ultra thick] (-5,0)--(5,0) node[right]{$x$};
+\draw[->,ultra thick] (0,-5)--(0,5) node[above]{$y$};
+\draw[->,ultra thick, blue] (0,0)--(2,3) node[right]{$v$};
+\draw[->,ultra thick, green] (2,3)--(3,4) node[right]{$v$};
+\draw[->,ultra thick, red] (0,0)--(3,4) node[right]{$v$};
+\end{tikzpicture}
+</script>
+
+
 
 ## Scalar Multiplication
 Lets say we want to multiply our vector, $$\symbf{v}$$, by the scalar value $$s$$, in this case each component of the vector is multipled by a factor $$s$$.
