@@ -146,7 +146,9 @@ Examples of higher-dimensional vectors:
 The standard basis vectors in $$ℝ^n$$ are:
 
 $$ \symbf{e}_1 = \begin{bmatrix} 1 & 0 & \cdots & 0 \end{bmatrix} $$
+
 $$ \symbf{e}_2 = \begin{bmatrix} 0 & 1 & \cdots & 0 \end{bmatrix} $$ 
+
 $$ \symbf{e}_n = \begin{bmatrix} 0 & 0 & \cdots & 1 \end{bmatrix} $$ 
 
 Every vector can be written uniquely as:
@@ -163,8 +165,9 @@ Vectors allow us to express:
 1. **Geometry**:  Points, lines, planes, higher-dimensional objects
 2. **Physics**: Forces, velocities, electric fields, acceleration.
 3. **Data Science and Machine Learning**: Every data sample is a vector. Every model parameter set is a vector. Algorithms manipulate vectors and matrices at scale.
-4. **Systems of Equations**: A system such as $$x + 2y + 3z = 6$$ is reinterpreted as a dot product $$\begin{bmatrix} 1 & 2 & 3 \end{bmatrix} \dot \begin{bmatrix} x & y & z \end{bmatrix} = 6$$
-5. **Computer Graphics**: Coordinates, transformations, rotations, scaling.
+4. **Systems of Equations**: A system such as $$x + 2y + 3z = 6$$ is reinterpreted as a dot product
+   $$\begin{bmatrix} 1 & 2 & 3 \end{bmatrix} \dot \begin{bmatrix} x & y & z \end{bmatrix} = 6$$
+6. **Computer Graphics**: Coordinates, transformations, rotations, scaling.
 
 In short: vectors are the universal format for structured numerical information.
 
