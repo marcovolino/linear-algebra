@@ -11,9 +11,7 @@ these numbers behave collectively under the two operations of addition and scala
 ### What Is a Vector?
 A vector in $$ℝ^n$$ is an ordered list of $$\symbf{n}$$ real numbers. 
 
-A vector is commonly denoted as a **bold** lower-case letter, _e.g._  $$\symbf{v}$$, or a lower-case letter with an arrow above it, _e.g._ $$\vec{v}$$. The scalar components of an N-dimensional vector are commonly denoted as lower-case letters with an integer subscript denoting its position in the vector e.g. $$v_1$$, $$v_2$$, ... $$v_N$$, 
-
-Within this course a vector, and its associated components, are denoted as follows:
+A vector is commonly denoted as a **bold** lower-case letter, _e.g._  $$\symbf{v}$$, or a lower-case letter with an arrow above it, _e.g._ $$\vec{v}$$. The scalar components of an N-dimensional vector are commonly denoted as lower-case letters with an integer subscript denoting its position in the vector e.g. $$v_1$$, $$v_2$$, ... $$v_N$$. Within this course a vector, and its associated components, are denoted as follows:
 
 $$
 \symbf{v} = \begin{bmatrix}
@@ -46,23 +44,6 @@ A structured collection of measurements, e.g., temperature, intensity, features 
 - **Functional view**
 A vector represents a state of a system, a set of coefficients, or a point in parameter space.
 
-
-### The Zero Vector and Direction
-The zero vector is
-
-$$
-\symbf{v}^T = 
-\begin{bmatrix} 
-    v_1 & v_2 & v_3
-\end{bmatrix}
-$$
-
-and behaves like the number 0 in ordinary arithmetic.
-Every nonzero vector \symbf{v} has:
-- a direction (the orientation of the arrow)
-- a magnitude or length
-
-
 ### Row vs Column Notation
 Vectors are traditionally written as columns:
 
@@ -86,6 +67,23 @@ $$
 is simply a transposed form used in dot products and matrix multiplication.
 
 *Important: A row vector is not the same mathematical object as a column vector,  their shapes carry meaning in linear algebra.*
+
+### The Zero Vector and Direction
+The zero vector is:
+
+$$
+\symbf{v} = 
+\begin{bmatrix} 
+    0 & 0 & \cdots & 0
+\end{bmatrix}
+$$
+
+and behaves like the number 0 in ordinary arithmetic.
+Every nonzero vector $$\symbf{v}$$ has:
+- a direction (the orientation of the arrow)
+- a magnitude or length
+
+
 
 
 ### Vector Spaces as the Natural Home of Vectors
