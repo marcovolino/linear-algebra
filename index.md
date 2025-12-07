@@ -38,21 +38,10 @@ By the end of the course, students will be able to:
 
 
 ## Contents - TODO
-{% assign pages = site.pages | where_exp: 'page', 'page.title' %}
-{% for page in pages %}
-- [{{page.title}}]({{site.baseurl}}{{page.url}})
-{% endfor %}
-
 {% assign contents = site.contents %}
-
 {% for module in contents %}
-
-
+**{{module.module}}**
   {% for section in module.nested %}
-  
-    {{module.module}} - {{section.section}} - {{section.url}}
-
-
+- [{{section.section}}]({{section.url}})
   {% endfor %}
-  
 {% endfor %}
