@@ -1,4 +1,4 @@
-"title: Introduction to Linear Algebra
+title: Introduction to Linear Algebra
 
 baseurl: /linear-algebra/
 
@@ -8,7 +8,6 @@ permalink: pretty
 
 header_pages:
  - none
-
 
 contents:
  - module: "Introduction"  
