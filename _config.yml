@@ -1,4 +1,4 @@
-title: Introduction to Linear Algebra
+"title: Introduction to Linear Algebra
 
 baseurl: /linear-algebra/
 
@@ -26,4 +26,4 @@ contents:
  - module: "Matrices, Matrix Algebra, Row Reduction"
    nested:
    - section: "Matricies"
-     url: "2/matricies-and-matrix-operations
+     url: "2/matricies-and-matrix-operations"
