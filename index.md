@@ -11,13 +11,21 @@ The course makes use of the following text books with references to related sect
 - Jānis Lazovskis – Introduction to Linear Algebra
 - Gilbert Strang – Introduction to Linear Algebra (5th Edition)
 
-## Prerequisite
+## Prerequisites
 - Prior exposure to basic linear algebra (not necessarily strong).
 - Comfort with algebra and basic calculus notation.
 - No programming experience required (tutorials provided).
 
-## Learning Outcomes
+## Course Contents
+{% assign contents = site.contents %}
+{% for module in contents %}
+**{{module.module}}**
+  {% for section in module.nested %}
+- [{{section.section}}]({{section.url}})
+  {% endfor %}
+{% endfor %}
 
+## Learning Outcomes
 By the end of the course, students will be able to:
 - **Core Algebraic Skills**
   - Perform vector and matrix operations; compute dot products, projections, and norms.
@@ -35,13 +43,3 @@ By the end of the course, students will be able to:
 - **Software Skills**
   - Use Python/NumPy for computations (optional but encouraged).
   - Apply code to solve systems, perform least squares, compute eigenvalues, and run PCA.
-
-
-## Contents - TODO
-{% assign contents = site.contents %}
-{% for module in contents %}
-**{{module.module}}**
-  {% for section in module.nested %}
-- [{{section.section}}]({{section.url}})
-  {% endfor %}
-{% endfor %}
