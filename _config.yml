@@ -22,7 +22,7 @@ contents:
    - section: "Vector Operations"
      url: "1/vector-operations"
    - section: "Self Assessment"
-     url: "1/vector-operations
+     url: "1/vector-operations"
  - module: "Matrices, Matrix Algebra, Row Reduction"
    nested:
    - section: "Matricies"
