@@ -46,9 +46,9 @@ In $$𝑅^2$$ or $$𝑅^3$$, Place the tail of $$\symbf{w}$$ at the head of \sym
 \draw[help lines, color=gray!30, dashed] (-4.9,-4.9) grid (4.9,4.9);
 \draw[->,ultra thick] (-5,0)--(5,0) node[right]{$x$};
 \draw[->,ultra thick] (0,-5)--(0,5) node[above]{$y$};
-\draw[->,ultra thick, blue] (0,0)--(2,3) node[right]{$v$};
-\draw[->,ultra thick, green] (2,3)--(3,4) node[right]{$v$};
-\draw[->,ultra thick, red] (0,0)--(3,4) node[right]{$v$};
+\draw[->,ultra thick, blue] (0,0)--(3,1) node[right]{$v$};
+\draw[->,ultra thick, green] (3,1)--(4,3) node[right]{$v$};
+\draw[->,ultra thick, red] (0,0)--(4,3) node[right]{$v$};
 \end{tikzpicture}
 </script>
 
