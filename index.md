@@ -1,5 +1,6 @@
 ---
 layout: home
+title: Introduction
 ---
 This course provides a concise but deep refresher on the core topics of linear algebra used in mathematics, data science, physics, engineering, and computer science.
 This course is intended for Undergraduates, Master’s students, and professionals seeking a mathematical refresher.
