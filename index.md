@@ -50,7 +50,7 @@ By the end of the course, students will be able to:
 
   {% for section in module.nested %}
   
-    {{module}} - {{section}} - {{section.url}}
+    {{module.module}} - {{section.section}} - {{section.url}}
 
 
   {% endfor %}
