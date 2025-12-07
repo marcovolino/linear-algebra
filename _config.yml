@@ -8,3 +8,22 @@ permalink: pretty
 
 header_pages:
  - none
+
+
+contents:
+ - module: Introduction  
+   nested:
+   - section: What is Linear Algebra ? 
+     url: "0/introduction-to-linear-algrbra"
+ - module: Vectors, Geometry, and Linear Combinations  
+   nested:
+   - section: Vectors
+     url: "1/vectors"
+   - section: Vector Operations
+     url: "1/vector-operations"
+   - section: Self Assessment 
+     url: "1/vector-operations
+ - module: Matrices, Matrix Algebra, Row Reduction  
+   nested:
+   - section: Matricies
+     url: "2/matricies-and-matrix-operations
