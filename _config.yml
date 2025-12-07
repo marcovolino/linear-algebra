@@ -13,7 +13,7 @@ contents:
  - module: "1. Introduction"  
    nested:
    - section: "What is Linear Algebra ?"
-     url: "1/introduction-to-linear-algrbra"
+     url: "1/introduction-to-linear-algebra"
  - module: "2. Vectors, Geometry, and Linear Combinations"
    nested:
    - section: "Vectors"
