@@ -10,19 +10,19 @@ header_pages:
  - none
 
 contents:
- - module: "Introduction"  
+ - module: "1. Introduction"  
    nested:
    - section: "What is Linear Algebra ?"
-     url: "0/introduction-to-linear-algrbra"
- - module: "Vectors, Geometry, and Linear Combinations"
+     url: "1/introduction-to-linear-algrbra"
+ - module: "2. Vectors, Geometry, and Linear Combinations"
    nested:
    - section: "Vectors"
-     url: "1/vectors"
+     url: "2/vectors"
    - section: "Vector Operations"
-     url: "1/vector-operations"
+     url: "2/vector-operations"
    - section: "Self Assessment"
-     url: "1/vector-operations"
- - module: "Matrices, Matrix Algebra, Row Reduction"
+     url: "2/vector-operations"
+ - module: "3. Matrices, Matrix Algebra, Row Reduction"
    nested:
    - section: "Matricies"
-     url: "2/matricies-and-matrix-operations"
+     url: "3/matricies-and-matrix-operations"
