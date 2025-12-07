@@ -3,7 +3,7 @@ layout: page
 title: Introduction
 ---
 
-![site logo]({{site.baseurl}}/image/logo.png)
+![site logo](images/logo.png)
 
 
 This course provides a concise but deep refresher on the core topics of linear algebra used in mathematics, data science, physics, engineering, and computer science.
