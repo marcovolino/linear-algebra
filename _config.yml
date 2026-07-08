@@ -1,28 +1,34 @@
-title: Introduction to Linear Algebra
+title: Linear Algebra for Computer Vision, Graphics and AI
+description: An applied introduction to linear algebra for engineering and AI students.
 
-baseurl: /linear-algebra/
+baseurl: /linear-algebra
 
 theme: minima
 
 permalink: pretty
 
-header_pages:
- - none
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
 
-contents:
- - module: "1. Introduction"  
-   nested:
-   - section: "What is Linear Algebra ?"
-     url: "1/introduction-to-linear-algebra"
- - module: "2. Vectors, Geometry, and Linear Combinations"
-   nested:
-   - section: "Vectors"
-     url: "2/vectors"
-   - section: "Vector Operations"
-     url: "2/vector-operations"
-   - section: "Self Assessment"
-     url: "2/vector-operations"
- - module: "3. Matrices, Matrix Algebra, Row Reduction"
-   nested:
-   - section: "Matricies"
-     url: "3/matricies-and-matrix-operations"
+header_pages:
+  - syllabus.md
+  - prerequisites.md
+  - glossary.md
+  - projects/index.md
+
+minima:
+  skin: auto
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - plan.md
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: lesson

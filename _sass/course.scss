@@ -1,0 +1,111 @@
+.course-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin: 0 0 1.5rem;
+  padding: .65rem 0;
+  border-bottom: 1px solid #d8dee4;
+}
+
+.course-nav a {
+  color: #23436f;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.course-nav a:hover,
+.course-nav a:focus {
+  text-decoration: underline;
+}
+
+.breadcrumb {
+  color: #59636e;
+  font-size: .95rem;
+  margin-bottom: .25rem;
+}
+
+.lesson-meta,
+.callout {
+  border-left: 4px solid #2f6f73;
+  background: #f6faf9;
+  padding: 1rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.callout-application {
+  border-left-color: #7b4f14;
+  background: #fff8ed;
+}
+
+.callout-warning {
+  border-left-color: #a23434;
+  background: #fff4f4;
+}
+
+.lesson-content mjx-container,
+.post-content mjx-container,
+.lesson-content .MathJax,
+.post-content .MathJax {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
+
+.lesson-content pre,
+.post-content pre {
+  overflow-x: auto;
+}
+
+details {
+  border: 1px solid #d8dee4;
+  border-radius: 6px;
+  padding: .75rem 1rem;
+  margin: 1rem 0;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.lesson-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid #d8dee4;
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+.lesson-nav-next {
+  margin-left: auto;
+  text-align: right;
+}
+
+.module-list {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.module-list section {
+  border: 1px solid #d8dee4;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.module-list h2 {
+  margin-top: 0;
+}
+
+@media (max-width: 640px) {
+  .lesson-nav {
+    display: block;
+  }
+
+  .lesson-nav a {
+    display: block;
+    margin: .5rem 0;
+    text-align: left;
+  }
+}

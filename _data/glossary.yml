@@ -1,0 +1,108 @@
+- term: Scalar
+  definition: A single number, such as a measurement, coefficient, or scale factor.
+- term: Vector
+  definition: An ordered list of numbers that can represent a point, direction, feature, signal, or quantity with magnitude and direction.
+- term: Matrix
+  definition: A rectangular array of numbers used to store data, represent systems of equations, or encode linear transformations.
+- term: Norm
+  definition: A measure of vector length. In this course, the default is the Euclidean norm.
+- term: Unit vector
+  definition: A vector with length one, often used to represent direction without scale.
+- term: Linear combination
+  definition: A sum made by scaling vectors and adding the results.
+- term: Dot product
+  definition: A sum of pairwise products between matching vector components. It measures alignment and is used to compute angles.
+- term: Orthogonal
+  definition: Perpendicular. Two non-zero vectors are orthogonal when their dot product is zero.
+- term: Projection
+  definition: The component or shadow of one vector in the direction of another vector.
+- term: Cosine similarity
+  definition: A normalised dot product that compares the direction of two non-zero vectors.
+- term: Identity matrix
+  definition: A square matrix that leaves a vector unchanged when multiplied by it.
+- term: Transpose
+  definition: The matrix formed by swapping rows and columns.
+- term: Inverse matrix
+  definition: A matrix that reverses the action of another square matrix, when such a reversal exists.
+- term: Linear transformation
+  definition: A function between vector spaces that preserves vector addition and scalar multiplication.
+- term: Linear system
+  definition: A collection of linear equations that must be satisfied by the same unknown values.
+- term: Augmented matrix
+  definition: A matrix that places a linear system's coefficient matrix and right-hand side in one array.
+- term: Pivot
+  definition: The leading non-zero entry in a matrix row used to eliminate other entries in its column.
+- term: Row echelon form
+  definition: A matrix form in which pivots move to the right down successive rows and all entries below each pivot are zero.
+- term: Gaussian elimination
+  definition: A method that uses elementary row operations to reduce a linear system to an easier equivalent system.
+- term: Vector space
+  definition: A set of vectors closed under vector addition and scalar multiplication.
+- term: Subspace
+  definition: A subset of a vector space that is itself a vector space under the same operations.
+- term: Span
+  definition: The set of all linear combinations of a collection of vectors.
+- term: Linear independence
+  definition: A property of vectors for which only the all-zero coefficients produce the zero vector.
+- term: Basis
+  definition: A linearly independent set of vectors that spans a vector space.
+- term: Dimension
+  definition: The number of vectors in any basis of a vector space.
+- term: Column space
+  definition: The span of a matrix's columns; it contains every possible output of the associated linear transformation.
+- term: Row space
+  definition: The span of a matrix's rows.
+- term: Null space
+  definition: The set of vectors mapped to zero by a matrix.
+- term: Rank
+  definition: The dimension of a matrix's column space, equal to the number of pivots.
+- term: Nullity
+  definition: The dimension of a matrix's null space.
+- term: Orthonormal
+  definition: Mutually orthogonal vectors, each with unit length.
+- term: Orthogonal matrix
+  definition: A square matrix whose columns form an orthonormal basis, so its transpose equals its inverse.
+- term: Gram-Schmidt process
+  definition: An algorithm that converts independent vectors into an orthonormal basis for the same span.
+- term: Least squares
+  definition: A method that chooses parameters to minimise the squared Euclidean residual.
+- term: QR decomposition
+  definition: A factorisation A=QR with orthonormal columns in Q and an upper-triangular matrix R.
+- term: Eigenvector
+  definition: A non-zero vector whose direction is unchanged by a linear transformation.
+- term: Eigenvalue
+  definition: The scalar by which a corresponding eigenvector is scaled.
+- term: Characteristic polynomial
+  definition: The polynomial det(A-lambda I), whose roots are the eigenvalues of A.
+- term: Diagonalisation
+  definition: Writing a matrix as PDP inverse using a basis of eigenvectors.
+- term: Spectral radius
+  definition: The largest absolute value among a matrix's eigenvalues.
+- term: Singular value decomposition
+  definition: A factorisation A=U Sigma V transpose into orthogonal input directions, non-negative scales, and orthogonal output directions.
+- term: Singular value
+  definition: A non-negative scaling factor in the singular value decomposition.
+- term: Low-rank approximation
+  definition: An approximation that retains only the most important singular directions of a matrix.
+- term: Pseudoinverse
+  definition: A generalised inverse that provides least-squares and minimum-norm solutions.
+- term: Condition number
+  definition: A measure of how strongly input errors or numerical rounding can affect a problem's output.
+- term: Homogeneous coordinates
+  definition: Coordinates with an additional scale component that let translation and projection be represented by matrices.
+- term: Affine transformation
+  definition: A linear transformation followed by a translation.
+- term: Camera matrix
+  definition: A matrix that maps homogeneous 3D world points to homogeneous image points.
+- term: Convolution
+  definition: A linear filtering operation that combines local values using a sliding kernel.
+- term: Principal component analysis
+  definition: A dimensionality-reduction method that projects centred data onto orthogonal directions of greatest variance.
+- term: Embedding
+  definition: A vector representation designed to capture useful properties or similarities of an object.
+- term: Activation function
+  definition: A usually non-linear function applied after an affine neural-network layer.
+- term: View matrix
+  definition: A matrix that transforms world coordinates into camera coordinates.
+- term: Projection matrix
+  definition: A matrix that maps camera-space geometry into homogeneous clip coordinates.

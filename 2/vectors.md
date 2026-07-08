@@ -1,175 +1,131 @@
 ---
-layout: page
+layout: lesson
 title: Vectors
+module: 2
+lesson: 1
+lesson_order: 20
+duration_minutes: 35
+prerequisites:
+  - Scalars
+  - Coordinate axes
+learning_outcomes:
+  - Represent vectors using component notation.
+  - Compute vector magnitude using the Euclidean norm.
+  - Interpret vectors geometrically as arrows or displacements.
+  - Convert a non-zero vector into a unit vector.
 ---
-Vectors are the fundamental objects of linear algebra. They allow us to describe motion, forces, data, images, signals, geometric transformations, and entire systems of equations in a unified mathematical language.
 
-A vector is simply an ordered list of numbers, but with a crucial structure:
-these numbers behave collectively under the two operations of addition and scalar multiplication.
+## Motivation
 
+A vector is a mathematical object with components that can encode magnitude and direction. Vectors can represent physical quantities such as force and velocity, but they also represent pixels, features, signals, word embeddings, and points in 2D or 3D graphics.
 
-### What Is a Vector?
-A vector in $$ℝ^n$$ is an ordered list of $$\symbf{n}$$ real numbers. 
+{% include callout.html
+   type="application"
+   title="AI connection"
+   content="In machine learning, each row of a data matrix is often treated as a feature vector. Similar vectors often correspond to similar examples."
+%}
 
-A vector is commonly denoted as a **bold** lower-case letter, _e.g._  $$\symbf{v}$$, or a lower-case letter with an arrow above it, _e.g._ $$\vec{v}$$. The scalar components of an N-dimensional vector are commonly denoted as lower-case letters with an integer subscript denoting its position in the vector e.g. $$v_1$$, $$v_2$$, ... $$v_N$$. Within this course a vector, and its associated components, are denoted as follows:
+## Definitions and Notation
+
+A vector is commonly written as a bold lowercase letter, such as $\mathbf{v}$. The scalar components of an $N$-dimensional vector are written using subscripts:
 
 $$
-\symbf{v} = \begin{bmatrix}
-    v_1 \\
-    v_2 \\
-    \vdots \\
-    v_N
+\mathbf{v} = \begin{bmatrix}
+v_1 \\
+v_2 \\
+\vdots \\
+v_N
 \end{bmatrix}
 $$
 
-### Different ways to understand a vector
-- **Geometric view**:
-Vectors can also be interpreted geometrically
+Here, $v_1$ is the first component, $v_2$ is the second component, and so on.
+
+## Magnitude
+
+The magnitude, or Euclidean norm, of a vector is denoted $\lVert \mathbf{v} \rVert_2$. For a vector with $N$ components,
+
+$$
+\lVert \mathbf{v} \rVert_2 =
+\sqrt{v_1^2 + v_2^2 + \dots + v_N^2}
+$$
+
+or, more compactly,
+
+$$
+\lVert \mathbf{v} \rVert_2 =
+\sqrt{\sum_{n=1}^{N} v_n^2}.
+$$
+
+For $\mathbf{v} = [4,3]^{\mathsf T}$, the magnitude is
+
+$$
+\lVert \mathbf{v} \rVert_2 = \sqrt{4^2 + 3^2} = 5.
+$$
+
+## Geometric Interpretation
+
+In two dimensions, a vector can be drawn as an arrow from the origin to a point. The components describe how far the arrow moves in each coordinate direction.
 
 <script type="text/tikz">
 \begin{tikzpicture}
 \draw[help lines, color=gray!30, dashed] (-4.9,-4.9) grid (4.9,4.9);
 \draw[->,ultra thick] (-5,0)--(5,0) node[right]{$x$};
 \draw[->,ultra thick] (0,-5)--(0,5) node[above]{$y$};
-\draw[->,ultra thick, blue] (0,0)--(4,3) node[right]{$v$};
+\draw[->,ultra thick, blue] (0,0)--(4,3) node[right]{$\mathbf{v}$};
+\draw[dashed] (4,0)--(4,3);
+\draw[dashed] (0,3)--(4,3);
+\node[below] at (4,0) {$4$};
+\node[left] at (0,3) {$3$};
 \end{tikzpicture}
 </script>
 
-- **Algebraic view**:
-A list of numbers we can add and scale according to precise rules.
+## Unit Vectors
 
-- **Data view**:
-A structured collection of measurements, e.g., temperature, intensity, features of an image.
-
-- **Functional view**
-A vector represents a state of a system, a set of coefficients, or a point in parameter space.
-
-### Row vs Column Notation
-Vectors are traditionally written as columns:
+A unit vector has magnitude one. It keeps the direction of a vector but removes its scale. For a non-zero vector $\mathbf{v}$, the corresponding unit vector is
 
 $$
-\symbf{v} = \begin{bmatrix}
-    v_1 \\
-    v_2 \\
-    v_3
+\mathbf{u} = \frac{\mathbf{v}}{\lVert \mathbf{v} \rVert_2}.
+$$
+
+For $\mathbf{v} = [4,3]^{\mathsf T}$,
+
+$$
+\mathbf{u}
+= \frac{1}{5}
+\begin{bmatrix}
+4 \\
+3
 \end{bmatrix}
+=
+\begin{bmatrix}
+0.8 \\
+0.6
+\end{bmatrix}.
 $$
 
-Writing as rows,
+## Implementation
 
-$$
-\symbf{v}^T = 
-\begin{bmatrix} 
-    v_1 & v_2 & v_3
-\end{bmatrix}
-$$
+```python
+import numpy as np
 
-is simply a transposed form used in dot products and matrix multiplication.
+v = np.array([4, 3])
+magnitude = np.linalg.norm(v)
+unit = v / magnitude
+print(magnitude, unit)
+```
 
-*Important: A row vector is not the same mathematical object as a column vector,  their shapes carry meaning in linear algebra.*
+## Common Mistakes
 
-### The Zero Vector and Direction
-The zero vector is:
+- Confusing the vector $\mathbf{v}$ with one of its components $v_i$.
+- Using $\lvert \mathbf{v} \rvert$ ambiguously when $\lVert \mathbf{v} \rVert_2$ is clearer.
+- Trying to normalise the zero vector. The zero vector has no direction, so it has no unit vector.
 
-$$
-\symbf{v} = 
-\begin{bmatrix} 
-    0 & 0 & \cdots & 0
-\end{bmatrix}
-$$
+## Practice
 
-and behaves like the number 0 in ordinary arithmetic.
-Every nonzero vector $$\symbf{v}$$ has:
-- a direction (the orientation of the arrow)
-- a magnitude or length
+1. Compute the magnitude of $\mathbf{v} = [6,8]^{\mathsf T}$.
+2. Find the unit vector in the direction of $\mathbf{v} = [1,2,2]^{\mathsf T}$.
+3. Give one physical and one AI example of a vector.
 
+## Summary
 
-
-
-### Vector Spaces as the Natural Home of Vectors
-A set of vectors forms a vector space when:
-
-- You can add any two vectors and stay inside the set.
-- You can multiply any vector by a scalar and stay inside the set.
-
-Examples:
-- $$ℝ^2$$, $$ℝ^3$$, $$ℝ^n$$
-- The set of all polynomials of degree ≤ 3
-- The set of all continuous functions
-- All $$ m×n matrices $$
-
-Later in the course, we will formalise this.
-
-
-### Vectors as Points and Arrows
-In $$ℝ^2$$, a vector like
-
-$$
-\symbf{v} = 
-\begin{bmatrix} 
-    3 \\ 
-    2
-\end{bmatrix}
-$$
-
-Corresponds to:
-- the point (3,2)
-- the arrow from (0,0) to (3,2)
-
-In $$ℝ^3$$, 
-
-$$
-\symbf{v} = 
-\begin{bmatrix} 
-    1 \\ 
-    -2 \\
-    4
-\end{bmatrix}
-$$
-
-is a point in 3D space and an arrow from the origin.
-
-**Key idea:** The location of the arrow is irrelevant, only its direction and magnitude matter.
-Sliding vectors around while keeping them parallel and the same length does not change the vector.
-This abstraction is central to linear algebra.
-
-
-### Vectors Beyond Geometry
-Even though we can draw only 2D and 3D vectors, vectors in higher dimensions behave the same.
-
-Examples of higher-dimensional vectors:
-- A grayscale image with 1,000 pixels → a vector in $$ℝ^1000$$.
-- A dataset with 20 features → each data point is a vector in $$ℝ^20$$.
-- A sound clip sampled at 44,100 Hz for 1 second → a vector in $$ℝ^44100$$.
-
-### Coordinate Axes and Basis Vectors
-The standard basis vectors in $$ℝ^n$$ are:
-
-$$ \symbf{e}_1 = \begin{bmatrix} 1 & 0 & \cdots & 0 \end{bmatrix} $$
-
-$$ \symbf{e}_2 = \begin{bmatrix} 0 & 1 & \cdots & 0 \end{bmatrix} $$ 
-
-$$ \symbf{e}_n = \begin{bmatrix} 0 & 0 & \cdots & 1 \end{bmatrix} $$ 
-
-Every vector can be written uniquely as:
-
-$$ \symbf{v} = v_1\symbf{e}_1 + v_2\symbf{e}_2 + \cdots + v_n\symbf{e}_n $$
-
-This representation is foundational because:
-- it shows linear algebra is about combining building blocks,
-- later modules will change the basis to simplify problems,
-- coordinate-free interpretations become possible.
-
-### Motivation: Why Study Vectors?
-Vectors allow us to express:
-1. **Geometry**:  Points, lines, planes, higher-dimensional objects
-2. **Physics**: Forces, velocities, electric fields, acceleration.
-3. **Data Science and Machine Learning**: Every data sample is a vector. Every model parameter set is a vector. Algorithms manipulate vectors and matrices at scale.
-4. **Systems of Equations**: A system such as $$x + 2y + 3z = 6$$ is reinterpreted as a dot product
-   $$\begin{bmatrix} 1 & 2 & 3 \end{bmatrix} \dot \begin{bmatrix} x & y & z \end{bmatrix} = 6$$
-6. **Computer Graphics**: Coordinates, transformations, rotations, scaling.
-
-In short: vectors are the universal format for structured numerical information.
-
-
-
+Vectors are ordered lists of numbers with algebraic and geometric interpretations. Their magnitude measures length, and unit vectors describe direction without scale.

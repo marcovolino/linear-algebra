@@ -1,0 +1,18 @@
+{% if page.duration_minutes or page.prerequisites or page.learning_outcomes %}
+<aside class="lesson-meta" aria-label="Lesson information">
+  {% if page.duration_minutes %}
+    <p><strong>Estimated study time:</strong> {{ page.duration_minutes }} minutes</p>
+  {% endif %}
+  {% if page.prerequisites %}
+    <p><strong>Prerequisites:</strong> {{ page.prerequisites | join: ", " }}</p>
+  {% endif %}
+  {% if page.learning_outcomes %}
+    <strong>Learning outcomes</strong>
+    <ul>
+      {% for outcome in page.learning_outcomes %}
+        <li>{{ outcome }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</aside>
+{% endif %}

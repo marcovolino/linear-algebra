@@ -1,0 +1,24 @@
+{% assign lesson_pages = site.pages | where_exp: "item", "item.lesson_order" | sort: "lesson_order" %}
+{% for item in lesson_pages %}
+  {% if item.url == page.url %}
+    {% unless forloop.first %}
+      {% assign previous_index = forloop.index0 | minus: 1 %}
+      {% assign previous_lesson = lesson_pages[previous_index] %}
+    {% endunless %}
+    {% unless forloop.last %}
+      {% assign next_index = forloop.index0 | plus: 1 %}
+      {% assign next_lesson = lesson_pages[next_index] %}
+    {% endunless %}
+  {% endif %}
+{% endfor %}
+
+{% if previous_lesson or next_lesson %}
+<nav class="lesson-nav" aria-label="Lesson navigation">
+  {% if previous_lesson %}
+    <a class="lesson-nav-previous" href="{{ previous_lesson.url | relative_url }}">Previous: {{ previous_lesson.title }}</a>
+  {% endif %}
+  {% if next_lesson %}
+    <a class="lesson-nav-next" href="{{ next_lesson.url | relative_url }}">Next: {{ next_lesson.title }}</a>
+  {% endif %}
+</nav>
+{% endif %}
