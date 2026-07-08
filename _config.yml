@@ -18,9 +18,6 @@ header_pages:
   - glossary.md
   - projects/index.md
 
-minima:
-  skin: auto
-
 exclude:
   - Gemfile
   - Gemfile.lock
