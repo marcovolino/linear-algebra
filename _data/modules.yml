@@ -145,7 +145,7 @@
     - { title: Data Matrices and Linear Regression, url: /11/data-matrices-and-linear-regression/ }
     - { title: Principal Component Analysis, url: /11/principal-component-analysis/ }
     - { title: Embeddings and Similarity, url: /11/embeddings-and-similarity/ }
-    - { title: Neural Network Layers in Matrix Form, url: /11/neural-network-layers/ }
+    - { title: Neural Network Layers in Matrix Form, url: /11/neural-network-layers-in-matrix-form/ }
     - { title: Self Assessment, url: /11/self-assessment/ }
 - number: 12
   title: Linear Algebra for Computer Graphics
