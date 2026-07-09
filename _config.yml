@@ -16,6 +16,7 @@ header_pages:
   - syllabus.md
   - prerequisites.md
   - glossary.md
+  - exercises/index.md
   - projects/index.md
 
 exclude:
