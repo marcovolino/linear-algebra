@@ -46,4 +46,4 @@ Near and far clipping planes determine the visible depth interval and influence 
 
 ## Summary
 
-View and projection matrices express camera motion and lens behavior before perspective division maps visible geometry into a standard cube.
+View and projection matrices express camera motion and lens behaviour before perspective division maps visible geometry into a standard cube.

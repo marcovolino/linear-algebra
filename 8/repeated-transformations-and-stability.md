@@ -71,7 +71,7 @@ print(max(abs(np.linalg.eigvals(A))))
 
 ## Practice
 
-1. Predict the behavior of modes with eigenvalues $0.8$, $-1.1$, and $1$.
+1. Predict the behaviour of modes with eigenvalues $0.8$, $-1.1$, and $1$.
 2. Find the spectral radius of $\operatorname{diag}(0.2,-0.7,1.3)$.
 3. Explain why the dominant eigenvector emerges under repeated multiplication.
 
